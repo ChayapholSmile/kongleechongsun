@@ -1,0 +1,55 @@
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+            font-family: 'Noto Sans', sans-serif;
+            overflow: hidden;
+        }
+
+        svg {
+            width: 90vw;  /* 90% ของหน้าจอ */
+            height: 50vh; /* 50% ของหน้าจอ */
+        }
+
+        text {
+            fill: none;
+            stroke: url(#rainbow);  /* สีรุ้ง */
+            stroke-width: 1;
+            font-size: 3vw; /* ขนาดข้อความเล็กลง */
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: write 8s ease-in-out forwards; /* ความเร็วแอนิเมชัน */
+        }
+
+        #text2 {
+            animation-delay: 8s;
+        }
+
+        #text3 {
+            animation-delay: 16s;
+        }
+
+        @keyframes write {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* สร้างแอนิเมชันสีรุ้ง */
+        @keyframes rainbowColors {
+            0% { stroke: red; }
+            14% { stroke: orange; }
+            28% { stroke: yellow; }
+            42% { stroke: green; }
+            57% { stroke: blue; }
+            71% { stroke: indigo; }
+            85% { stroke: violet; }
+            100% { stroke: red; }
+        }
+
+        #rainbow {
+            animation: rainbowColors 10s linear infinite;
+        }
