@@ -1,0 +1,30 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: "Noto Sans Thai", sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#content {
+    padding: 20px;
+}
+
+canvas {
+    border: 1px solid #ccc;
+}
